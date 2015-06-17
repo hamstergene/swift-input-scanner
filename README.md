@@ -19,6 +19,11 @@ A simple, easy to use input scanner for Swift 2.
         probs.append(scanner.readDouble()!)
     }
 
+The `ExampleListCalc/` folder contains an example project, which calculates arithmetic expressions in LISP syntax:
+
+    >>> (- (^ 2 16) 6)
+    65530.0
+
 ### Build
 
 Compile `Scanner.swift` with your project.
