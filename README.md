@@ -59,13 +59,11 @@ Core interface:
 
 ### Error handling
 
-The error handling is non-existing yet.
+All functions return `nil` if parsing failed, or EOF is reached. The `eof` property can be used to distinguish between those two.
 
-All functions return `nil` if parsing failed, or EOF is reached. The `var eof` property can be used to distinguish between those two.
-
-If parsing fails, the scanner is left in undetermined state. Currently, all value reading functions stop at first bad character, which means it will be the next character seen by the scanner. For example, calling `readDouble()` on "1eX" string will consume "1e" and return nil, the following `readCharacter()` call will return "X".
+The value reading functions stop at first bad character, which means it will be the next character seen by the scanner. For example, calling `readDouble()` on "1eX" string will consume "1e" and return nil, the following `readCharacter()` call will return "X".
 
 ## License
 
-The standard MIT license. See [LICENSE.md].
+The standard MIT license. See [LICENSE] file.
 
