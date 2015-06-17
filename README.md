@@ -1,0 +1,1 @@
+# swift-input-scanner
