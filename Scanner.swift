@@ -170,7 +170,7 @@ class Scanner {
     
     /// Creates Scanner that scans a string.
     convenience init(string: String) {
-        self.init(characterGenerator: string.generate())
+        self.init(characterGenerator: string.characters.generate())
     }
     
     init<G : GeneratorType where G.Element == Character>(characterGenerator: G) {
@@ -223,7 +223,7 @@ class StdinCharacterGenerator : CharacterGeneratorType {
             }
         }
         if let nextLine = readLine(stripNewline: false) {
-            currentLineGenerator = nextLine.generate()
+            currentLineGenerator = nextLine.characters.generate()
             return currentLineGenerator!.next()
         }
         return nil
